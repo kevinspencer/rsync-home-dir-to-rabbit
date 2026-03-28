@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sudo rsync -avh --delete -E \
+rsync -avh --delete -E \
   --exclude=".DS_Store" \
   --exclude="Library/" \
   "/Users/kevin/" \
   "/Volumes/rabbit/home/"
 
-date > /Volumes/rabbit/.lastran
+date > /Volumes/rabbit/.lastran-$(basename "$0" .sh)

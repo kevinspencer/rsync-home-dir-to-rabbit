@@ -5,7 +5,7 @@ if [ ! -d "/Volumes/rabbit" ]; then
     exit 1
 fi
 
-rsync -avh --delete -E \
+sudo rsync -avh --delete --no-owner --no-group \
   --exclude=".DS_Store" \
   --exclude="Library/" \
   "/Users/kevin/" \
